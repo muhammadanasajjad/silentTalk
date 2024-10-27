@@ -1,0 +1,821 @@
+[debug] [2024-10-24T21:22:33.068Z] ----------------------------------------------------------------------
+[debug] [2024-10-24T21:22:33.072Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-10-24T21:22:33.073Z] CLI Version:   13.22.1
+[debug] [2024-10-24T21:22:33.073Z] Platform:      linux
+[debug] [2024-10-24T21:22:33.073Z] Node Version:  v20.16.0
+[debug] [2024-10-24T21:22:33.074Z] Time:          Thu Oct 24 2024 22:22:33 GMT+0100 (British Summer Time)
+[debug] [2024-10-24T21:22:33.074Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-24T21:22:33.189Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-24T21:22:33.190Z] > authorizing via signed-in user (muhammadanasajjad@gmail.com)
+[debug] [2024-10-24T21:22:33.353Z] openjdk version "21.0.4" 2024-07-16
+
+[debug] [2024-10-24T21:22:33.354Z] OpenJDK Runtime Environment (build 21.0.4+7-Ubuntu-1ubuntu224.04)
+OpenJDK 64-Bit Server VM (build 21.0.4+7-Ubuntu-1ubuntu224.04, mixed mode, sharing)
+
+[debug] [2024-10-24T21:22:33.366Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: database, hosting"}}
+[debug] [2024-10-24T21:22:33.384Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-24T21:22:33.385Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-24T21:22:33.385Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-24T21:22:33.386Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-10-24T21:22:33.392Z] [hub] writing locator at /tmp/hub-silenttalk-9b776.json
+[debug] [2024-10-24T21:22:33.400Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:33.401Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:33.404Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-24T21:22:33.786Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-24T21:22:33.786Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[debug] [2024-10-24T21:22:33.787Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-10-24T21:22:33.789Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-10-24T21:22:33.789Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-24T21:22:33.790Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-10-24T21:22:33.790Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false,"shell":false,"port":9000} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":9000}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-10-24T21:22:36.002Z] 22:22:35.999 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"22:22:35.999 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-10-24T21:22:36.294Z] 22:22:36.294 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"22:22:36.294 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2024-10-24T21:22:36.429Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:36.430Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:36.431Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 
+[debug] [2024-10-24T21:22:37.678Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 200
+[debug] [2024-10-24T21:22:37.679Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites {"sites":[{"name":"projects/silenttalk-9b776/sites/silentalk","defaultUrl":"https://silentalk.web.app","appId":"1:966030168690:web:f7d17333591d5b808928eb","type":"USER_SITE"},{"name":"projects/silenttalk-9b776/sites/silenttalk-9b776","defaultUrl":"https://silenttalk-9b776.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-10-24T21:22:37.679Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:37.679Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:37.680Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config [none]
+[debug] [2024-10-24T21:22:38.491Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config 200
+[debug] [2024-10-24T21:22:38.491Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config {"projectId":"silenttalk-9b776","appId":"1:966030168690:web:f7d17333591d5b808928eb","databaseURL":"https://silenttalk-9b776-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"silenttalk-9b776.appspot.com","apiKey":"AIzaSyAGBYxrMjSVrO_Mm83hU_5STEVeJHt0Tfk","authDomain":"silenttalk-9b776.firebaseapp.com","messagingSenderId":"966030168690"}
+[debug] [2024-10-24T21:22:38.503Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:38.504Z] Checked if tokens are valid: true, expires at: 1729808100813
+[debug] [2024-10-24T21:22:38.504Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-24T21:22:38.709Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-24T21:22:38.709Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[info] i  hosting[silenttalk-9b776]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[silenttalk-9b776]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-10-24T21:22:38.767Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-24T21:22:38.768Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-10-24T21:22:38.768Z] Starting Emulator UI with command {"binary":"node","args":["/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-10-24T21:22:39.049Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-10-24T21:22:39.050Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[debug] [2024-10-24T21:22:39.199Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┬────────────────────────────────┐
+│ Emulator │ Host:Port      │ View in Emulator UI            │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Database │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │ n/a                            │
+└──────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-10-24T21:22:56.203Z] 22:22:56.201 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 358ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"22:22:56.201 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 358ms, init: 0ms\n"}}
+[debug] [2024-10-24T21:23:12.077Z] 22:23:12.071 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace silenttalk-9b776, but the emulator is configured for fake-server. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"22:23:12.071 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace silenttalk-9b776, but the emulator is configured for fake-server. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-24T21:23:12.106Z] 22:23:12.105 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 22ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"22:23:12.105 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 22ms, init: 0ms\n"}}
+[debug] [2024-10-24T21:26:41.231Z] 22:26:41.230 [FirebaseWorkerPool-1-4] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace silenttalk-9b776-default-rtdb, but the emulator is configured for silenttalk-9b776,fake-server. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"22:26:41.230 [FirebaseWorkerPool-1-4] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace silenttalk-9b776-default-rtdb, but the emulator is configured for silenttalk-9b776,fake-server. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-24T21:26:41.244Z] 22:26:41.242 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 7ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"22:26:41.242 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 7ms, init: 0ms\n"}}
+[debug] [2024-10-24T22:22:36.606Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[warn] ⚠  Emulator UI has exited upon receiving signal: SIGINT 
+[info] i  hosting: Stopping Hosting Emulator {"metadata":{"emulator":{"name":"hosting"},"message":"Stopping Hosting Emulator"}}
+[info] i  database: Stopping Database Emulator {"metadata":{"emulator":{"name":"database"},"message":"Stopping Database Emulator"}}
+[debug] [2024-10-24T22:22:36.667Z] 23:22:36.664 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+ {"metadata":{"emulator":{"name":"database"},"message":"23:22:36.664 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.\n"}}
+[debug] [2024-10-24T22:22:36.715Z] 23:22:36.708 [NamespaceSystem-akka.actor.default-dispatcher-112] INFO com.firebase.core.namespace.Terminator$Terminator - 3 actors left to terminate: silenttalk-9b776-default-rtdb, fake-server, silenttalk-9b776
+ {"metadata":{"emulator":{"name":"database"},"message":"23:22:36.708 [NamespaceSystem-akka.actor.default-dispatcher-112] INFO com.firebase.core.namespace.Terminator$Terminator - 3 actors left to terminate: silenttalk-9b776-default-rtdb, fake-server, silenttalk-9b776\n"}}
+[debug] [2024-10-24T22:22:36.724Z] 23:22:36.723 [NamespaceSystem-akka.actor.default-dispatcher-125] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for silenttalk-9b776
+23:22:36.724 [NamespaceSystem-akka.actor.default-dispatcher-117] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for silenttalk-9b776-default-rtdb
+ {"metadata":{"emulator":{"name":"database"},"message":"23:22:36.723 [NamespaceSystem-akka.actor.default-dispatcher-125] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for silenttalk-9b776\n23:22:36.724 [NamespaceSystem-akka.actor.default-dispatcher-117] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for silenttalk-9b776-default-rtdb\n"}}
+[debug] [2024-10-24T22:22:36.726Z] 23:22:36.724 [NamespaceSystem-akka.actor.default-dispatcher-114] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for fake-server
+ {"metadata":{"emulator":{"name":"database"},"message":"23:22:36.724 [NamespaceSystem-akka.actor.default-dispatcher-114] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for fake-server\n"}}
+[debug] [2024-10-24T22:22:36.747Z] 23:22:36.744 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+ {"metadata":{"emulator":{"name":"database"},"message":"23:22:36.744 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.\n"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2024-10-24T22:22:37.095Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.096Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.097Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.097Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.098Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.098Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.099Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.099Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.100Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.101Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.101Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.103Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.103Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.104Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.104Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.105Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.106Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.106Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.107Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.107Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.108Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.109Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.109Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.110Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.110Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.111Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.112Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.112Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.113Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.114Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.114Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.114Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.115Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.115Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.116Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.118Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.119Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-24T22:22:37.119Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:161:15)
+    at writeGeneric (node:internal/stream_base_commons:152:3)
+    at Socket._writeGeneric (node:net:954:11)
+    at Socket._write (node:net:966:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/internal/streams/writable.js:334:12)
+[error] 
+[debug] [2024-10-25T18:13:05.428Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T18:13:05.430Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-10-25T18:13:05.430Z] CLI Version:   13.22.1
+[debug] [2024-10-25T18:13:05.430Z] Platform:      linux
+[debug] [2024-10-25T18:13:05.430Z] Node Version:  v20.16.0
+[debug] [2024-10-25T18:13:05.431Z] Time:          Fri Oct 25 2024 19:13:05 GMT+0100 (British Summer Time)
+[debug] [2024-10-25T18:13:05.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T18:13:05.501Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T18:13:05.501Z] > authorizing via signed-in user (muhammadanasajjad@gmail.com)
+[debug] [2024-10-25T18:13:05.678Z] openjdk version "21.0.4" 2024-07-16
+
+[debug] [2024-10-25T18:13:05.679Z] OpenJDK Runtime Environment (build 21.0.4+7-Ubuntu-1ubuntu224.04)
+OpenJDK 64-Bit Server VM (build 21.0.4+7-Ubuntu-1ubuntu224.04, mixed mode, sharing)
+
+[debug] [2024-10-25T18:13:05.690Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: database, hosting"}}
+[debug] [2024-10-25T18:13:05.710Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-25T18:13:05.710Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-25T18:13:05.710Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-25T18:13:05.711Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-10-25T18:13:05.718Z] [hub] writing locator at /tmp/hub-silenttalk-9b776.json
+[debug] [2024-10-25T18:13:05.731Z] Checked if tokens are valid: false, expires at: 1729808100813
+[debug] [2024-10-25T18:13:05.731Z] Checked if tokens are valid: false, expires at: 1729808100813
+[debug] [2024-10-25T18:13:05.732Z] > refreshing access token with scopes: []
+[debug] [2024-10-25T18:13:05.733Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-25T18:13:05.733Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T18:13:05.847Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-25T18:13:05.847Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T18:13:05.860Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-25T18:13:06.111Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-25T18:13:06.112Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[debug] [2024-10-25T18:13:06.112Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-10-25T18:13:06.120Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-10-25T18:13:06.121Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-25T18:13:06.122Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-10-25T18:13:06.122Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false,"shell":false,"port":9000} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":9000}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-10-25T18:13:08.166Z] 19:13:08.163 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:08.163 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-10-25T18:13:08.650Z] 19:13:08.650 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:08.650 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2024-10-25T18:13:08.779Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:08.779Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:08.780Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 
+[debug] [2024-10-25T18:13:09.935Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 200
+[debug] [2024-10-25T18:13:09.935Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites {"sites":[{"name":"projects/silenttalk-9b776/sites/silentalk","defaultUrl":"https://silentalk.web.app","appId":"1:966030168690:web:f7d17333591d5b808928eb","type":"USER_SITE"},{"name":"projects/silenttalk-9b776/sites/silenttalk-9b776","defaultUrl":"https://silenttalk-9b776.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-10-25T18:13:09.937Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:09.938Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:09.939Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config [none]
+[debug] [2024-10-25T18:13:10.803Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config 200
+[debug] [2024-10-25T18:13:10.803Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config {"projectId":"silenttalk-9b776","appId":"1:966030168690:web:f7d17333591d5b808928eb","databaseURL":"https://silenttalk-9b776-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"silenttalk-9b776.appspot.com","apiKey":"AIzaSyAGBYxrMjSVrO_Mm83hU_5STEVeJHt0Tfk","authDomain":"silenttalk-9b776.firebaseapp.com","messagingSenderId":"966030168690"}
+[debug] [2024-10-25T18:13:10.811Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:10.811Z] Checked if tokens are valid: true, expires at: 1729883584847
+[debug] [2024-10-25T18:13:10.811Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-25T18:13:11.040Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-25T18:13:11.041Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[info] i  hosting[silenttalk-9b776]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[silenttalk-9b776]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-10-25T18:13:11.086Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-25T18:13:11.086Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-10-25T18:13:11.086Z] Starting Emulator UI with command {"binary":"node","args":["/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-10-25T18:13:11.234Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-10-25T18:13:11.234Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[debug] [2024-10-25T18:13:11.298Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┬────────────────────────────────┐
+│ Emulator │ Host:Port      │ View in Emulator UI            │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Database │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │ n/a                            │
+└──────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-10-25T18:13:34.108Z] 19:13:34.105 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 330ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:34.105 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 330ms, init: 0ms\n"}}
+[debug] [2024-10-25T18:13:35.972Z] 19:13:35.969 [FirebaseWorkerPool-1-1] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace silenttalk-9b776, but the emulator is configured for silenttalk-9b776-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:35.969 [FirebaseWorkerPool-1-1] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace silenttalk-9b776, but the emulator is configured for silenttalk-9b776-default-rtdb. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-25T18:13:36.018Z] 19:13:36.017 [NamespaceSystem-akka.actor.default-dispatcher-7] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 24ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:36.017 [NamespaceSystem-akka.actor.default-dispatcher-7] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 24ms, init: 0ms\n"}}
+[debug] [2024-10-25T18:13:58.236Z] 19:13:58.236 [FirebaseWorkerPool-1-4] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace fake-server, but the emulator is configured for silenttalk-9b776,silenttalk-9b776-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:58.236 [FirebaseWorkerPool-1-4] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace fake-server, but the emulator is configured for silenttalk-9b776,silenttalk-9b776-default-rtdb. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-25T18:13:58.249Z] 19:13:58.249 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 8ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"19:13:58.249 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 8ms, init: 0ms\n"}}
+[debug] [2024-10-26T23:59:57.055Z] ----------------------------------------------------------------------
+[debug] [2024-10-26T23:59:57.064Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-10-26T23:59:57.065Z] CLI Version:   13.22.1
+[debug] [2024-10-26T23:59:57.065Z] Platform:      linux
+[debug] [2024-10-26T23:59:57.065Z] Node Version:  v20.16.0
+[debug] [2024-10-26T23:59:57.065Z] Time:          Sun Oct 27 2024 00:59:57 GMT+0100 (British Summer Time)
+[debug] [2024-10-26T23:59:57.065Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-26T23:59:57.070Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-10-26T23:59:57.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-26T23:59:57.336Z] > authorizing via signed-in user (muhammadanasajjad@gmail.com)
+[debug] [2024-10-26T23:59:57.507Z] openjdk version "21.0.4" 2024-07-16
+
+[debug] [2024-10-26T23:59:57.508Z] OpenJDK Runtime Environment (build 21.0.4+7-Ubuntu-1ubuntu224.04)
+OpenJDK 64-Bit Server VM (build 21.0.4+7-Ubuntu-1ubuntu224.04, mixed mode, sharing)
+
+[debug] [2024-10-26T23:59:57.518Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: database, hosting"}}
+[debug] [2024-10-26T23:59:57.531Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-26T23:59:57.531Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-26T23:59:57.531Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-10-26T23:59:57.532Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-10-26T23:59:57.537Z] [hub] writing locator at /tmp/hub-silenttalk-9b776.json
+[debug] [2024-10-26T23:59:57.547Z] Checked if tokens are valid: false, expires at: 1729883584847
+[debug] [2024-10-26T23:59:57.547Z] Checked if tokens are valid: false, expires at: 1729883584847
+[debug] [2024-10-26T23:59:57.548Z] > refreshing access token with scopes: []
+[debug] [2024-10-26T23:59:57.549Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-26T23:59:57.549Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-26T23:59:57.612Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-10-26T23:59:57.612Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-10-26T23:59:57.631Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-26T23:59:57.631Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-26T23:59:57.639Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-26T23:59:58.067Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-26T23:59:58.067Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[debug] [2024-10-26T23:59:58.067Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-10-26T23:59:58.070Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-10-26T23:59:58.071Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-26T23:59:58.071Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-10-26T23:59:58.071Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false,"shell":false,"port":9000} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/home/infimous/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":9000}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-10-27T00:00:04.396Z] 01:00:04.385 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:04.385 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-10-27T00:00:05.351Z] 01:00:05.351 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:05.351 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2024-10-27T00:00:05.681Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:05.685Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:05.688Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 
+[debug] [2024-10-27T00:00:07.091Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites 200
+[debug] [2024-10-27T00:00:07.091Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/silenttalk-9b776/sites {"sites":[{"name":"projects/silenttalk-9b776/sites/silentalk","defaultUrl":"https://silentalk.web.app","appId":"1:966030168690:web:f7d17333591d5b808928eb","type":"USER_SITE"},{"name":"projects/silenttalk-9b776/sites/silenttalk-9b776","defaultUrl":"https://silenttalk-9b776.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-10-27T00:00:07.092Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:07.092Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:07.092Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config [none]
+[debug] [2024-10-27T00:00:07.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config 200
+[debug] [2024-10-27T00:00:07.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776/webApps/-/config {"projectId":"silenttalk-9b776","appId":"1:966030168690:web:f7d17333591d5b808928eb","databaseURL":"https://silenttalk-9b776-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"silenttalk-9b776.appspot.com","apiKey":"AIzaSyAGBYxrMjSVrO_Mm83hU_5STEVeJHt0Tfk","authDomain":"silenttalk-9b776.firebaseapp.com","messagingSenderId":"966030168690"}
+[debug] [2024-10-27T00:00:07.873Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:07.873Z] Checked if tokens are valid: true, expires at: 1729990796632
+[debug] [2024-10-27T00:00:07.873Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 [none]
+[debug] [2024-10-27T00:00:08.099Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 200
+[debug] [2024-10-27T00:00:08.099Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/silenttalk-9b776 {"projectId":"silenttalk-9b776","projectNumber":"966030168690","displayName":"SilentTalk","name":"projects/silenttalk-9b776","resources":{"hostingSite":"silenttalk-9b776","realtimeDatabaseInstance":"silenttalk-9b776-default-rtdb"},"state":"ACTIVE","etag":"1_580cd13b-1e7d-42bf-badb-cf7445121c99"}
+[debug] [2024-10-27T00:00:08.102Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "silenttalk-9b776" may fail or be empty.
+[info] i  hosting[silenttalk-9b776]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[silenttalk-9b776]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-10-27T00:00:08.166Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-10-27T00:00:08.167Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-10-27T00:00:08.167Z] Starting Emulator UI with command {"binary":"node","args":["/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/infimous/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-10-27T00:00:08.647Z] Web / API server started at 127.0.0.1:4000
+Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\nWeb / API server started at ::1:4000\n"}}
+[debug] [2024-10-27T00:00:08.843Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┬────────────────────────────────┐
+│ Emulator │ Host:Port      │ View in Emulator UI            │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Database │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database │
+├──────────┼────────────────┼────────────────────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │ n/a                            │
+└──────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-10-27T00:00:10.713Z] 01:00:10.712 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace silenttalk-9b776, but the emulator is configured for silenttalk-9b776-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:10.712 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace silenttalk-9b776, but the emulator is configured for silenttalk-9b776-default-rtdb. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-27T00:00:11.173Z] 01:00:11.163 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 365ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:11.163 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776 successfully activated FBKV (SurveyIdle(0)) wait: 365ms, init: 0ms\n"}}
+[debug] [2024-10-27T00:00:11.184Z] 01:00:11.183 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 1442ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:11.183 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - silenttalk-9b776-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 1442ms, init: 0ms\n"}}
+[debug] [2024-10-27T00:00:49.019Z] 01:00:49.015 [FirebaseWorkerPool-1-1] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace fake-server, but the emulator is configured for silenttalk-9b776,silenttalk-9b776-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:49.015 [FirebaseWorkerPool-1-1] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested \nnamespace fake-server, but the emulator is configured for silenttalk-9b776,silenttalk-9b776-default-rtdb. To \nopt-out of single project mode add/set the singleProjectMode: false property in \nthe firebase.json emulators config. \n"}}
+[debug] [2024-10-27T00:00:49.058Z] 01:00:49.056 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 29ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"01:00:49.056 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - fake-server successfully activated FBKV (SurveyIdle(0)) wait: 29ms, init: 0ms\n"}}
