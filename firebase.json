@@ -1,5 +1,6 @@
 {
     "hosting": {
+        "site": "silentalk",
         "public": "build",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
         "rewrites": [
