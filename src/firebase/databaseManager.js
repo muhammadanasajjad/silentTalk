@@ -42,7 +42,6 @@ export function pushElementInRef(refPath, data, callback) {
         } else {
             const newData = val ? [...val, data] : [data];
             setElementInRef(refPath, newData, callback);
-            console.log("Push Successful", null);
         }
     });
 }

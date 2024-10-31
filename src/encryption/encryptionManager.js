@@ -15,13 +15,6 @@ export function hexToUint8Array(hexString) {
 }
 
 export function uint8ArrayToHex(uint8Array) {
-    console.log(
-        uint8Array
-            .map((int) => {
-                return int.toString(16).padStart(2, "0");
-            })
-            .join("")
-    );
     return Array.from(uint8Array, (byte) =>
         byte.toString(16).padStart(2, "0")
     ).join("");

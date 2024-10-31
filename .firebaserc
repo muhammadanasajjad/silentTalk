@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "silenttalk-9b776"
-  }
+  },
+  "targets": {
+    "silenttalk-9b776": {
+      "hosting": {
+        "silentalk": [
+          "silenttalk-9b776"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
