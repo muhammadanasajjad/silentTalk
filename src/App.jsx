@@ -3,6 +3,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./pages/Chat";
 import MainPage from "./pages/MainPage";
+import AddFriend from "./pages/AddFriend";
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     {
         path: "/chat/:username",
         element: <Chat />,
+    },
+    {
+        path: "/addFriend",
+        element: <AddFriend />,
     },
 ]);
 

@@ -1,0 +1,56 @@
+.friend-request {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--bg-color);
+    border-bottom: var(--bg-grey-color) 1px solid;
+    padding-left: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.friend-pfp {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/pfp-default.png);
+    background-position: center;
+}
+
+.friend-request-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.friend-request-buttons ion-icon {
+    padding: 0.3rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: 0.75rem;
+    background-color: var(--bg-grey-color);
+    border-radius: 1rem;
+
+    transition: all 200ms ease;
+}
+
+.friend-request-buttons ion-icon:hover {
+    cursor: pointer;
+
+    background-color: var(--main-color);
+}

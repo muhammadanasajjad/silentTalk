@@ -8,6 +8,10 @@ export function getBigIntFromHex(hex) {
 }
 
 export function hexToUint8Array(hexString) {
+    // hexString = hexString.padStart(
+    //     2 ** Math.ceil(Math.log2(hexString.length)),
+    //     "0"
+    // );
     const byteArray = new Uint8Array(
         hexString.match(/.{1,2}/g).map((byte) => parseInt(byte, 16))
     );
@@ -68,7 +72,7 @@ export function getSharedKey(otherPublicKey, privateKey, prime) {
 
 // Import the hex key as a CryptoKey
 async function importKey(hexKey) {
-    const rawKey = hexToUint8Array(hexKey); // Convert hex to Uint8Array
+    const rawKey = hexToUint8Array(hexKey.padStart(64, "0")); // Convert hex to Uint8Array
 
     return crypto.subtle.importKey(
         "raw", // Key format
@@ -108,14 +112,18 @@ export async function decryptMessage(ciphertext, iv, sharedKey) {
     const key = await importKey(sharedKey);
 
     // Perform decryption
-    const decryptedData = await crypto.subtle.decrypt(
-        {
-            name: "AES-GCM",
-            iv: iv, // Use the same IV that was used for encryption
-        },
-        key, // Decryption key
-        ciphertext // Encrypted data (as Uint8Array)
-    );
+    const decryptedData = await crypto.subtle
+        .decrypt(
+            {
+                name: "AES-GCM",
+                iv: iv, // Use the same IV that was used for encryption
+            },
+            key, // Decryption key
+            ciphertext // Encrypted data (as Uint8Array)
+        )
+        .catch((err) => {
+            console.log(err);
+        });
 
     // Decode the decrypted data back to a string
     const decoder = new TextDecoder();

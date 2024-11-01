@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+}
+
+.container div {
+    color: var(--text-grey-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.container p {
+    margin: 0px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.container input {
+    background-color: var(--bg-grey-color);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    min-width: 0.5rem;
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+.container ion-icon {
+    margin-left: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    font-weight: bold;
+
+    transition: all 200ms ease;
+}
+
+.container ion-icon:hover {
+    cursor: pointer;
+
+    background-color: var(--bg-grey-color);
+}
+
+.container button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 0px;
+    outline: 0px;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    min-width: 0.5rem;
+    width: 65%;
+}
+
+.container button:hover {
+    cursor: pointer;
+}
+
+.container h4 {
+    margin: 0px;
+    text-decoration: underline;
+    transition: all 200ms ease;
+}
+
+.container h4:hover {
+    cursor: pointer;
+
+    color: var(--main-color);
+}
+
+.sign-up-confirm-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.sign-up-confirm {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1.5rem;
+}
+
+.sign-up-confirm > p {
+    margin-bottom: 1rem;
+}

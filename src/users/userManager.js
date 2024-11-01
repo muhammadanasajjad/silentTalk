@@ -42,7 +42,7 @@ export function sendFriendRequest(from, to, fromPrivateKey) {
             let friendRequest = {
                 from,
                 to,
-                fromPublicKey: getHexFromBigInt(publicKey),
+                fromPublicKey: getHexFromBigInt(publicKey).padStart(64, "0"),
                 prime: getHexFromBigInt(prime),
                 generator: 2,
                 toPublicKey: "",
@@ -79,20 +79,47 @@ export function acceptFriendRequest(from, to, toPrivateKey) {
                         prime
                     );
 
-                    let sharedKey = getSharedKey(
-                        otherPublicKey,
-                        toPrivateKey,
-                        prime
-                    );
-                    setElementInRef(
-                        `friendRequests/${i}/toPublicKey`,
-                        getHexFromBigInt(thisPublicKey),
-                        () => {
-                            resolve(sharedKey);
-                        }
-                    );
+                    setElementInRef(`friendships/${from}|${to}`, {
+                        messages: ["initialMessage"],
+                        [`${from}Key`]: getHexFromBigInt(
+                            otherPublicKey
+                        ).padStart(64, "0"),
+                        [`${to}Key`]: getHexFromBigInt(thisPublicKey).padStart(
+                            64,
+                            "0"
+                        ),
+                        prime: getHexFromBigInt(prime),
+                    });
+                    pushElementInRef(`users/${from}/friends`, to);
+                    pushElementInRef(`users/${to}/friends`, from);
+                    rejectFriendRequest(from, to);
                 }
             }
+        });
+    });
+}
+
+export function rejectFriendRequest(from, to) {
+    return new Promise((resolve) => {
+        getElementFromRef("friendRequests", (friendRequests, err) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            let newFriendRequests = [];
+            for (let i = 0; i < friendRequests.length; i++) {
+                if (
+                    friendRequests[i].from === from &&
+                    friendRequests[i].to === to
+                ) {
+                    continue;
+                } else {
+                    newFriendRequests.push(friendRequests[i]);
+                }
+            }
+            setElementInRef("friendRequests", newFriendRequests, () => {
+                resolve();
+            });
         });
     });
 }
@@ -118,12 +145,6 @@ export function createFriendship(from, to, fromPrivateKey) {
                         friendRequest.fromPublicKey
                     );
 
-                    let sharedKey = getSharedKey(
-                        otherPublicKey,
-                        fromPrivateKey,
-                        prime
-                    );
-
                     let friendship = {
                         messages: ["initialMessage"],
                         temp: "something",
@@ -133,6 +154,7 @@ export function createFriendship(from, to, fromPrivateKey) {
                     friendship[`${to}Key`] = getHexFromBigInt(otherPublicKey);
                     friendship[`prime`] = getHexFromBigInt(prime);
 
+                    pushElementInRef(`users/${from}/friends`, to);
                     setElementInRef(
                         `friendships/${from}|${to}`,
                         friendship,
@@ -146,7 +168,7 @@ export function createFriendship(from, to, fromPrivateKey) {
                             //         resolve(sharedKey);
                             //     }
                             // );
-                            resolve(sharedKey);
+                            resolve();
                         }
                     );
                 }
@@ -171,7 +193,6 @@ export function getSharedKeyFromFriendship(
                             console.log(err);
                             return;
                         }
-                        console.log(friendship);
                         let otherPublicKey = getBigIntFromHex(
                             privateKeyIsFrom
                                 ? friendship[`${to}Key`]
@@ -200,7 +221,6 @@ export function getSharedKeyFromFriendship(
 
 export async function sendMessage(from, to, message, reply = 1, sharedKey = 1) {
     let date = new Date();
-    console.log(reply);
     let encryptedMessage = await encryptMessage(
         message,
         getHexFromBigInt(sharedKey)
@@ -302,9 +322,16 @@ export async function decryptAllMessages(encryptedMessages, sharedKey) {
     let decryptedMessages = [];
     for (let i = 1; i < encryptedMessages.length; i++) {
         let encryptedMessage = encryptedMessages[i];
+        let ciphertext = hexToUint8Array(encryptedMessage.split("|")[1]);
+        let iv = hexToUint8Array(encryptedMessage.split("|")[2]);
+        decryptMessage(ciphertext, iv, getHexFromBigInt(sharedKey)).catch(
+            (err) => {
+                console.log(err);
+            }
+        );
         let message = await decryptMessage(
-            hexToUint8Array(encryptedMessage.split("|")[1]),
-            hexToUint8Array(encryptedMessage.split("|")[2]),
+            ciphertext,
+            iv,
             getHexFromBigInt(sharedKey)
         );
         message =

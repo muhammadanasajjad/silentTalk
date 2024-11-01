@@ -6,6 +6,7 @@ import {
     decryptMessage,
     getRandomBigInt,
     getSharedKey,
+    getPublicKey,
 } from "../encryption/encryptionManager";
 import { database, storage } from "../firebase";
 import {
@@ -25,7 +26,9 @@ import emojiList from "../emoji-list.json";
 import { ref, getDownloadURL } from "firebase/storage";
 import { useSwipeable } from "react-swipeable";
 import Message from "../components/Message";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+
+import "../css/Chat.css";
 
 function Chat({}) {
     const bits = 256;
@@ -45,12 +48,41 @@ function Chat({}) {
     const otherPrivateKey = getBigIntFromHex(
         "b6639f6c45688d95b2cd1ad77c2c88943e12911a8f90927b6654e93fce412b7d"
     );
+    //  "5e07f3f2ef108a73abe9a76cd0fe3c0a236a638e4ccbe8be2cd705b5e25b3421"
+
+    useEffect(() => {
+        getUserData().then((data) => {
+            if (data.username && data.privateKey) {
+                setUsername(data.username);
+                setThisPrivateKey(data.privateKey);
+                // setOtherUsername(inputOtherUser);
+                getUser(urlParams.username).then((val) => {
+                    setOtherUserData(val);
+                });
+                getSharedKeyFromFriendship(
+                    data.username,
+
+                    urlParams.username,
+                    getBigIntFromHex(data.privateKey)
+                ).then((val) => {
+                    handleRefresh(
+                        data.username,
+
+                        urlParams.username,
+                        val
+                    );
+                    setSharedKey(val);
+                });
+            } else {
+                navigate("/");
+            }
+        });
+    }, []);
 
     useEffect(() => {
         if (otherUsername) {
             getDownloadURL(ref(storage, `userPFPs/${otherUsername}.png`))
                 .then((url) => {
-                    // setOtherPFP(url);
                     document.getElementsByClassName(
                         "message-pfp"
                     )[0].style.backgroundImage = `url(${url})`;
@@ -179,6 +211,7 @@ function Chat({}) {
     // });
 
     // console.log(encryptMessage("hello", sharedKey));
+    const navigate = useNavigate();
     return (
         <div className="App">
             <div id="emojis-list-container">
@@ -234,10 +267,16 @@ function Chat({}) {
                                 ) : (
                                     <ion-icon name="chatbubbles-outline"></ion-icon>
                                 )}
-                                <div>
-                                    {messages.length > 0
-                                        ? "Scroll Down For More"
-                                        : "Say Hi"}
+                                <div
+                                    style={
+                                        sharedKey ? {} : { fontSize: "1rem" }
+                                    }
+                                >
+                                    {sharedKey
+                                        ? messages.length > 0
+                                            ? "Scroll Down For More"
+                                            : "Say Hi"
+                                        : `Waiting for @${otherUsername} to create encrypted channel`}
                                 </div>
                             </div>
                         </div>
@@ -473,95 +512,7 @@ function Chat({}) {
                 </div>
             ) : (
                 <>
-                    <input
-                        placeholder="Enter Username"
-                        type="text"
-                        id="input-username"
-                    />
-                    <input
-                        placeholder="Enter Private Key"
-                        type="text"
-                        id="input-privateKey"
-                    />
-                    <input
-                        placeholder="Enter Other User"
-                        type="text"
-                        id="input-otherUser"
-                    />
-                    <button
-                        id="button-join"
-                        onClick={() => {
-                            getUserData().then((data) => {
-                                if (data.username && data.privateKey) {
-                                    const inputOtherUser =
-                                        document.getElementById(
-                                            "input-otherUser"
-                                        ).value;
-                                    setUsername(data.username);
-                                    setThisPrivateKey(data.privateKey);
-                                    // setOtherUsername(inputOtherUser);
-                                    getUser(urlParams.username).then((val) => {
-                                        setOtherUserData(val);
-                                    });
-                                    getSharedKeyFromFriendship(
-                                        data.username,
-
-                                        urlParams.username,
-                                        getBigIntFromHex(data.privateKey)
-                                    ).then((val) => {
-                                        handleRefresh(
-                                            data.username,
-
-                                            urlParams.username,
-                                            val
-                                        );
-                                        setSharedKey(val);
-                                    });
-                                } else {
-                                    const inputUsername =
-                                        document.getElementById(
-                                            "input-username"
-                                        ).value;
-                                    const inputPrivateKey =
-                                        document.getElementById(
-                                            "input-privateKey"
-                                        ).value;
-                                    const inputOtherUser =
-                                        document.getElementById(
-                                            "input-otherUser"
-                                        ).value;
-
-                                    saveUserData(
-                                        inputPrivateKey,
-                                        urlParams.username
-                                    );
-
-                                    // sendFriendRequest(
-                                    //     inputUsername,
-                                    //     inputOtherUser,
-                                    //     getBigIntFromHex(inputPrivateKey),
-                                    //     bits
-                                    // ).then((thisPublicKey) => {
-                                    //     console.log(
-                                    //         getHexFromBigInt(thisPublicKey)
-                                    //     );
-                                    // });
-                                    setUsername(inputUsername);
-                                    setThisPrivateKey(inputPrivateKey);
-                                    // setOtherUsername(inputOtherUser);
-                                    // console.log(
-                                    //     getSharedKeyFromFriendship(
-                                    //         inputUsername,
-                                    //         inputOtherUser,
-                                    //         getBigIntFromHex(inputPrivateKey)
-                                    //     )
-                                    // );
-                                }
-                            });
-                        }}
-                    >
-                        Join
-                    </button>
+                    <div>Loading...</div>
                 </>
             )}
         </div>
