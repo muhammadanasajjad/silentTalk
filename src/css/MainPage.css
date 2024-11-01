@@ -13,20 +13,70 @@
     color: var(--text-color);
     font-size: 1.2rem;
     padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.sign-out {
+.header-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/logo.png);
+    background-position: center;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-right > div {
+    margin-left: 10px;
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: var(--bg-grey-color);
     color: var(--text-color);
+    font-size: 1.2rem;
+    min-width: 1.2em;
 
     transition: all 200ms ease;
 }
 
-.sign-out:hover {
+.header-right > div:hover {
     cursor: pointer;
     background-color: var(--main-color);
+}
+
+.header-right > div.sign-out {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header-right > div.your-pfp {
+    width: 3rem;
+    height: 3rem;
+    padding: 0px;
+    border-radius: 100%;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/pfp-default.png);
+    background-position: center;
 }
 
 .friend-container {

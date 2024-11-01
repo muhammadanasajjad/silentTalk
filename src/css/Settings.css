@@ -1,0 +1,134 @@
+.upload-image-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-image-container ion-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.your-filler-container {
+    height: calc(100vh);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.your-filler-container .your-pfp {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 25px;
+    background-size: cover;
+    border-radius: 5rem;
+    background-repeat: no-repeat;
+    background-image: url(../img/pfp-default.png);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 200ms ease;
+}
+
+.your-pfp ion-icon {
+    font-size: 2.5rem;
+    color: transparent;
+}
+
+.your-pfp:hover ion-icon {
+    color: var(--text-color);
+}
+
+.your-pfp:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.your-filler-container .your-name-filler {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.your-name-filler ion-icon {
+    font-size: 2rem;
+    color: var(--text-grey-color);
+    margin-left: 1rem;
+
+    transition: all 200ms ease;
+}
+
+.your-name-filler ion-icon:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.your-name-filler input {
+    background-color: var(--bg-grey-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    min-width: 0.5rem;
+    width: 100%;
+}
+
+.your-filler-container .your-actual-name-filler {
+    font-size: 2rem;
+    color: var(--text-grey-color);
+}
+
+.your-scroll-indicator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-grey-color);
+}
+
+.your-scroll-indicator ion-icon {
+    /* margin-top: 0.5rem; */
+    margin: 0.5rem;
+}
+
+.your-scroll-indicator :last-child {
+    /* background-color: var(--bg-grey-color); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 200ms ease;
+}
+
+.your-scroll-indicator :last-child:hover {
+    cursor: pointer;
+    color: var(--main-color);
+    /* color: var(--bg-color); */
+}

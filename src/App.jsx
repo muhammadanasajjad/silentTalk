@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./pages/Chat";
 import MainPage from "./pages/MainPage";
 import AddFriend from "./pages/AddFriend";
+import Settings from "./pages/Settings";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
         path: "/addFriend",
         element: <AddFriend />,
+    },
+    {
+        path: "/settings",
+        element: <Settings />,
     },
 ]);
 

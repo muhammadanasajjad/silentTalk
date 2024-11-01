@@ -20,16 +20,18 @@ const MainPage = () => {
         getUserData().then((data) => {
             if (data.username != null) {
                 setSavedUserData(data);
+                getDownloadURL(
+                    ref(storage, `userPFPs/${data.username}.png`)
+                ).then((url) => {
+                    document.getElementsByClassName(
+                        "your-pfp"
+                    )[0].style.backgroundImage = `url(${url})`;
+                });
             } else {
                 setSavedUserData("Not found");
             }
         });
     }, []);
-
-    useEffect(() => {
-        if (savedUserData != "Not found" && savedUserData != undefined) {
-        }
-    }, [savedUserData]);
 
     useEffect(() => {
         if (savedUserData != "Not found" && savedUserData != undefined) {
@@ -87,20 +89,28 @@ const MainPage = () => {
             {savedUserData != "Not found" && (
                 <>
                     <div className="header-container">
-                        Friends
-                        <ion-icon
-                            onClick={() => navigate("/addFriend")}
-                            name="person-add"
-                        ></ion-icon>
-                        <div
-                            className="sign-out"
-                            onClick={() => {
-                                deleteUserData();
-                                setSavedUserData("Not found");
-                                setUserInfo({});
-                            }}
-                        >
-                            Sign out
+                        <div className="header-left">
+                            <div className="logo-img"></div>
+                            <div>SilentTalk</div>
+                        </div>
+                        <div className="header-right">
+                            <div onClick={() => navigate("/addFriend")}>
+                                <ion-icon name="person-add"></ion-icon>
+                            </div>
+                            <div
+                                className="sign-out"
+                                onClick={() => {
+                                    deleteUserData();
+                                    setSavedUserData("Not found");
+                                    setUserInfo({});
+                                }}
+                            >
+                                Sign out
+                            </div>
+                            <div
+                                onClick={() => navigate("/settings")}
+                                className="your-pfp"
+                            ></div>
                         </div>
                     </div>
                     {userInfo &&
@@ -129,7 +139,7 @@ const MainPage = () => {
                                             ></div>
                                             {user.name != null
                                                 ? user.name
-                                                : user.id}
+                                                : "@" + user.id}
                                         </div>
                                     </Link>
                                 );
